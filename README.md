@@ -4,7 +4,7 @@
 
 
 ## AWS | EKS BluePrint ProxySQL
-Provisioning an Amazon Elastic Kubernetes Service (EKS) cluster using Terraform allows you to define your entire infrastructure (VPC, subnets, IAM roles, and the cluster itself) as code, ensuring repeatable, version-controlled, and automated deployments.
+ProxySQL is a high-performance MySQL-compatible database proxy that sits between your application and MySQL/RDS.
 
 
 
@@ -21,11 +21,14 @@ Provisioning an Amazon Elastic Kubernetes Service (EKS) cluster using Terraform 
 
 🧱 Features
 ```
-✔ Fully automated provisioning with Terraform
-✔ High availability using multiple subnets in different Availability Zones
-✔ Secure connectivity between Application and RDS
-✔ Configurable environment variables for database credentials
-✔ Easy to extend for other JSON data source
+✔ Read/write splitting
+✔ Connection pooling
+✔ Failover
+✔ Query routing
+✔ Query rules
+✔ Load balancing
+✔ Connection management
+✔ Minimal application changes
 ```
 
 

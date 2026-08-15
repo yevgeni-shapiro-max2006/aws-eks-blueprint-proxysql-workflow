@@ -22,28 +22,13 @@ module "minio" {
   depends_on = [module.kong]
 }
 
-module "loki" {
-  source = "./modules/loki"
+module "proxysql" {
+  source = "./modules/proxysql"
   depends_on = [module.minio]
-}
-
-module "promtail" {
-  source = "./modules/promtail"
-  depends_on = [module.loki]
-}
-
-module "prometheus" {
-  source = "./modules/prometheus"
-  depends_on = [module.promtail]
-}
-
-module "grafana" {
-  source = "./modules/grafana"
-  depends_on = [module.prometheus]
 }
 
 module "ingress" {
   source = "./modules/ingress"
-  depends_on = [module.grafana]
+  depends_on = [module.proxysql]
 }
 

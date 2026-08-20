@@ -1,6 +1,6 @@
 
 ###  ---  Default Template  ---  ###
-aws_region      = "eu-central-1" # \\\ eu-central-1
+aws_region      = "us-west-2" # \\\ eu-central-1   us-west-2
 cluster_name    = "eks-cluster-proxysql"
 cluster_version = "1.35"
 instance_types  = ["t3.medium"]
